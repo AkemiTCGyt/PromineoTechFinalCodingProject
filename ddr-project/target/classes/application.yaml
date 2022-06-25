@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: ddr
+    password: ddr
+    url: jdbc:mysql://localhost:3306/ddrsongs
+
+logging:
+  level:
+    root: warn
+    '[com.promineotech]': debug
