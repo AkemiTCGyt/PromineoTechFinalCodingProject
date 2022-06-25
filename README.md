@@ -28,5 +28,4 @@ These features will be implemented as time goes by for the api.
 - Allow users to favorite songs and have their own list of songs.
 - Force login information for users.
 - Update personal user information
--
 
