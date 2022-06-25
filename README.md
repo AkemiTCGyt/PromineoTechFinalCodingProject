@@ -15,3 +15,15 @@ Features/Endpoints for a DDR_Song API:
 -	Delete an existing song in the database (DELETE on ddr_songs)
 -	Leave a post corresponding to a song (POST on posts)
 -	Leave a comment corresponding to a post (POST on comments)
+## Stretch Goals (to be completed if time allows, or after graduation):
+These features will be implemented as time goes by for the api.
+- Browse songs by genre (GET on genre specified)
+- Browse songs by mix (GET on mix specified)
+- View all details about a specific song by name (GET by song_name in ddr_songs)
+- Read specific reviews on a DDR_Song (GET on posts & comments)
+- Adding in all songs and continuously updating them.
+- Mobile application so this could be used on-the-go. Very useful in tournaments where there’s little time to prep for each song.
+- Allow users to favorite songs and have their own list of songs.
+- Force login information for users.
+- Update personal user information
+
