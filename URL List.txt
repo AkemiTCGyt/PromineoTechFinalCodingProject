@@ -1,0 +1,54 @@
+Below are the URLs for the ddrsongs project
+
+DDRSongs
+http://localhost:8080/swagger-ui/index.html#/
+
+GET /ddrsongs/ - ALL songs in the database
+		-- SELECT * FROM ddr_songs;
+
+GET /ddrsongs/{song_name} - Gets a particular song by song_name
+		-- SELECT * FROM ddr_songs WHERE song_name = song_name;
+
+POST /ddrsongs/ - Creates a new song
+		-- INSERT INTO ddr_songs (ALL parameters) VALUES (All parameters)
+
+PUT /ddrsongs/ - Updates an existing song
+		-- UPDATE ddr_songs SET (All parameters) WHERE (All parameters = All parameters)
+
+DELETE /ddrsongs/ - Deletes an existing song given the song id
+		-- DELETE FROM ddr_songs WHERE ddr_song_id_pk = ddr_song_id_pk
+
+USERS
+
+POST /users/ - Creates a new user
+		-- INSERT INTO user (username) VALUES (username)
+
+POSTS
+
+POST /posts/ - Creates a new post for the corresponding song id
+		-- INSERT INTO posts (user_id_fk, ddr_song_id_fk, post_body) VALUES (user_id_fk, ddr_song_id_fk, post_body)
+
+COMMENTS
+
+POST /comments/ - Creates a new comment for the corresponding post id
+		-- INSERT INTO comments (user_id_fk, post_id_fk, comment_body) VALUES (user_id_fk, post_id_fk, comment_body)
+
+EACH of these URLs have similar error outputs as follows
+    	    @ApiResponse(
+                responseCode = "200",
+                description = "X was done successfully!",
+                content = @Content(
+                    mediaType = "application/json", 
+                    schema = @Schema(implementation = Comment.class))),
+            @ApiResponse(
+                responseCode = "400", 
+                description = "The request parameters are invalid", 
+                content = @Content(mediaType = "application/json")),
+            @ApiResponse(
+                responseCode = "404",
+                description = "X was not found", 
+                content = @Content(mediaType = "application/json")),
+            @ApiResponse(
+                responseCode = "500", 
+                description = "An unplanned error occurred.", 
+                content = @Content(mediaType = "application/json"))
